@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iframe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="browserStructure">
+      <div class="website">
+        <div class="browserControls">
+          <div class="reduire"><ion-icon name="remove"></ion-icon></div>
+          <div class="minMax">
+            <ion-icon name="square-outline"></ion-icon>
+          </div>
+          <div class="close"><ion-icon name="close"></ion-icon></div>
+        </div>
+        <div class="onglet">
+          <div class="tab">
+            <div class="tabTog">
+              <img class="wikiFav" src="w.png" alt="wikipedia favicon" />
+              <p class="tab_name">Wikipidea</p>
+            </div>
+
+            <a class="close_tab_btn">
+              <ion-icon class="close-tab" name="close-outline"></ion-icon>
+            </a>
+          </div>
+        </div>
+        <div class="anotherTab">
+          <a href="#" class="otherTab">
+            <ion-icon name="add-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="mainPage">
+          <div class="topSearch">
+            <div class="btns">
+              <a href="#" class="backBtn btnNav">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+              </a>
+              <a href="#" class="forwardBtn btnNav">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+
+            <div class="reloadBtn">
+              <a class="loadBtn" href="#">
+                <ion-icon name="refresh-outline"></ion-icon>
+              </a>
+            </div>
+            <!-- search bar -->
+            <div class="searchBar">
+              <input
+                class="searchInput"
+                type="text"
+                id="searchInput"
+                placeholder="Type to search"
+              />
+            </div>
+            <!-- search button -->
+            <div class="searchBtn">
+              <a href="#" class="enterSearch">
+                <ion-icon name="search-outline"></ion-icon
+              ></a>
+            </div>
+            <!-- downloads -->
+            <div class="downloadParam">
+              <div class="downloads">
+                <a class="downloadBtn" href="#">
+                  <ion-icon name="document-outline"></ion-icon>
+                </a>
+              </div>
+              <div class="parameters">
+                <a class="param" href="#">
+                  <ion-icon name="options-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="page"></div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="navigation">
+      <img src="wiki.png" alt="wikipedia picture" class="logo" />
+
+      <div class="wikiBar">
+        <input class="searchWiki" type="text" placeholder="Search Wikipidea" />
+      </div>
+      <div class="nav">
+        <p class="account">Create account</p>
+        <p class="log">Log in</p>
+        <ion-icon class="options" name="ellipsis-horizontal-outline"></ion-icon>
+      </div>
+    </section>
+    <section class="articleSection">
+      <div class="contents">
+        <div class="contentTi">
+          <h3 class="contentHeader">Contents</h3>
+        </div>
+
+        <ul class="contentTitles">
+          <a class="titleLink" href="#"><p class="pageTitle">Example</p></a>
+          <a class="titleLink" href="#"
+            ><p class="pageTitle">History and usage</p></a
+          >
+          <a class="titleLink" href="#"
+            ><p class="pageTitle">Breaking the cipher</p></a
+          >
+          <a class="titleLink" href="#"><p class="pageTitle">See also</p></a>
+          <a class="titleLink" href="#"><p class="pageTitle">Notes</p></a>
+        </ul>
+      </div>
+      <div class="article">
+        <div class="articleHeader"><p class="headerAr">Caesar cipher</p></div>
+        <div class="artImg">
+          <p class="articleBody">
+            In cryptography, a Caesar cipher, is one of the simplest and most
+            widely known encryption techniques. It is a type of substitution
+            cipher in which each letter in the plaintext is replaced by a letter
+            some fixed number of positions down the alphabet. For example, with
+            a left shift of 3, D would be replaced by A, E would become B, and
+            so on.
+          </p>
+          <div class="arImg">
+            <img class="articleImg" src="cez.png" alt="Caesar cipher image" />
+          </div>
+        </div>
+
+        <div class="Examples"><p class="artExp">Exemples</p></div>
+        <div class="ex">
+          <p class="exText">
+            Here's an example of the Caesar cipher with a shift of 3:
+            <br />
+            Original alphabet: A B C D E F G H I J K L M N O P Q R S T U V W X Y
+            Z <br />
+
+            Shifted alphabet: D E F G H I J K L M N O P Q R S T U V W X Y Z A B
+            C <br />
+            Using this shifted alphabet, you can encrypt a message by replacing
+            each letter with the one that is three positions to the right. For
+            example, the word "HELLO" would be encrypted as "KHOOR."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

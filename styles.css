@@ -1,0 +1,426 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font size: 10px;
+    10px / 16px = 0.625 = 62.5%
+    percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  background-image: url("windowsBg.jpg"); /* Replace 'your-image.jpg' with the path to your background image */
+  background-attachment: fixed;
+  background-size: cover; /* Optional: Adjust the background size as needed */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+}
+
+/* .browserStructure {
+  background: url("images/windowsBg.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+} */
+.website {
+  position: fixed;
+  width: 100vw;
+  height: 150vh;
+  padding-top: 35px;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  overflow: hidden;
+  color: #000;
+}
+.website::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: url("windowsBg.jpg");
+  background-attachment: scroll;
+  filter: blur(5px);
+  background-size: cover;
+  background-position: center;
+}
+
+.mainPage {
+  position: relative;
+  background-color: white;
+  height: 100%;
+  z-index: 3;
+  border-radius: 2px;
+}
+
+.topSearch {
+  height: 6%;
+
+  background-image: linear-gradient(to top, #cbd8d5, #ecf3f2);
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+
+  /* justify-content: center; */
+  align-items: center;
+  padding: 5px;
+}
+
+.btns {
+  padding: 5px 9px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnNav:link,
+.btnNav:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #767676;
+}
+.btnNav:hover,
+.btnNav:active {
+  color: #767676;
+}
+
+.searchBar {
+  grid-column: 3 / span 16;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 5px;
+}
+.searchBtn {
+  grid-column: 19/20;
+  padding: 7px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.searchInput {
+  flex: 1;
+}
+.downloadParam {
+  display: flex;
+}
+.downloads {
+  padding: 5px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.parameters {
+  padding: 5px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reloadBtn {
+  padding: 5px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.loadBtn:link,
+.loadBtn:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #767676;
+}
+.loadBtn:hover,
+.loadBtn:active {
+  color: #767676;
+}
+.param:link,
+.param:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #767676;
+}
+.param:hover,
+.param:active {
+  color: #767676;
+}
+.downloadBtn:link,
+.downloadBtn:visited {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #767676;
+}
+.downloadBtn:hover,
+.downloadBtn:active {
+  color: #767676;
+}
+
+.onglet {
+  border-bottom: 24px solid #ecf3f2;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  height: 0;
+  width: 180px;
+  z-index: 5;
+  position: absolute;
+  top: 11px;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6.5px;
+  font-size: 1.3rem;
+}
+.tabTog {
+  display: flex;
+  gap: 1rem;
+  padding-left: 0.3rem;
+}
+.wikiFav {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.tab_name {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: #333333;
+}
+.tab_logo {
+  margin-right: 6px;
+  padding-left: 2px;
+}
+.close_tab_btn:link,
+.close_tab_btn:visited {
+  text-decoration: none;
+
+  color: #767676;
+}
+.close_tab_btn:hover,
+.close_tab_btn:active {
+  color: #767676;
+  cursor: pointer;
+}
+
+.anotherTab {
+  position: absolute;
+  z-index: 8;
+  width: 18px;
+  height: 13px;
+  transform: skew(30deg);
+  background: #d5dfe0;
+  left: 184px;
+  top: 18px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.otherTab {
+  transform: skewX(-20deg);
+  position: absolute;
+  top: 2px;
+  left: 2.6px;
+}
+.otherTab:link,
+.otherTab:visited {
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  color: #333333;
+}
+.otherTab:hover,
+.otherTab:active {
+  color: #333333;
+  font-size: 1.1rem;
+}
+
+.browserControls {
+  position: absolute;
+  right: 2px;
+  top: 0;
+  display: flex;
+  font-size: 1.4rem;
+}
+.close {
+  background: linear-gradient(to top, rgb(235, 38, 38), rgb(214, 185, 185));
+  padding: 1.5px 14px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+  color: #333333;
+}
+.reduire {
+  background: linear-gradient(to top, rgb(156, 171, 175), rgb(255, 255, 255));
+  padding: 1.5px 9px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 3px;
+  cursor: pointer;
+  color: #333333;
+}
+.minMax {
+  background: linear-gradient(to top, rgb(156, 171, 175), rgb(255, 255, 255));
+  padding: 1.5px 9px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: #333333;
+}
+
+/***********************/
+/*NAVIGATION*/
+/***********************/
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 4rem;
+  padding: 0rem 4rem;
+  position: absolute;
+  top: 13rem;
+  z-index: 15;
+}
+.logo {
+  width: 10rem;
+}
+.wikiBar {
+  border: none;
+  margin-bottom: 1rem;
+  margin-left: -51rem;
+}
+.searchWiki {
+  width: 40rem;
+  height: 3rem;
+}
+.nav {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  font-size: 1.5rem;
+}
+.account,
+.log,
+.options {
+  cursor: pointer;
+  color: #333333;
+}
+
+.articleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  gap: 2rem;
+  padding: 0 4rem;
+  position: absolute;
+  top: 24rem;
+  z-index: 15;
+}
+.contentTi {
+  border-bottom: 1px solid #00000049;
+}
+.contentHeader {
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  color: #333333;
+}
+
+.contentTitles {
+  padding-top: 3rem;
+  width: 230px;
+}
+
+ul.contentTitles p.pageTitle {
+  display: block;
+  padding-bottom: 1rem;
+}
+.titleLink:link,
+.titleLink:visited {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333333;
+}
+.titleLink:hover,
+.titleLink:active {
+  color: #333333;
+}
+.articleHeader {
+  margin-top: -3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #00000049;
+  width: 90%;
+}
+.headerAr {
+  font-size: 3.6rem;
+  color: #333333;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.articleBody {
+  margin-top: -1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333333;
+  font-family: sans-serif;
+  line-height: 1.5;
+  width: 90%;
+}
+.artImg {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-top: 2rem;
+}
+
+.articleImg {
+  width: 30rem;
+  border: 1px solid #00000049;
+  padding: 2.5rem 1rem;
+}
+.Examples {
+  margin-top: -4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #00000049;
+  width: 60%;
+}
+.artExp {
+  font-size: 2.8rem;
+  color: #333333;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.exText {
+  padding-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333333;
+  font-family: sans-serif;
+  line-height: 1.5;
+  width: 90%;
+}
+.contents {
+  margin-top: -13rem;
+}
